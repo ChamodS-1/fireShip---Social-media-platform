@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('extra/meta-data') %>
+        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="/style/post.css">
+        <link rel="stylesheet" href="/style/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600&display=swap" rel="stylesheet">
+        <script src="/scripts/file-priview.js" defer></script>
+        <title>Sign Up</title>
+</head>
+
+<body>
+
+    <%- include('extra/main-pane') %>
+
+        <h1>Sign Up.</h1>
+
+
+        <div id="inser-form">
+
+            <div id="form-head">
+                <a href="/blog-home"><h3><img src="image/dating-app-logo-tinder-removebg-preview (1).png" alt="" style="width: 5rem;">fireShip</h3></a>
+                <h4>CREATE NEW ACCOUNT</h4>
+                <img src="/image/6076f540d539fa8c97126f0b_straigtaway.svg" alt="image">
+
+                
+        <% if(emailstatus) { %>
+            <p class="errorMessage">Email Not Match</p>
+        <% } else if(passwordstatus){ %>
+            <p class="errorMessage">Password length not enough</p>
+            <% } else if(emailpasswordstatus) { %>
+            <p class="errorMessage">Email Not Match & Password length not enough</p>
+            <% } else if(existing) { %>
+                <p class="errorMessage">Email already has an account</p>
+            <% } %>
+
+            <a href="/login"><p class="already">Have an Account? Login<p></a>
+        
+            </div>
+
+            <div id="form">
+
+                <form action="/sign-up" method="POST" enctype="multipart/form-data">
+
+
+                    <label for="userName">
+                        <h3>User Name</h3>
+                    </label>
+                    <input type="text" name="userName" id="userName" required>
+
+                    <label for="email">
+                        <h3>Enter Email Address</h3>
+                    </label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="re-email">
+                        <h3>Confirm Email</h3>
+                    </label>
+                    <input type="email" name="reemail" id="re-email" required>
+
+                    <label for="password">
+                        <h3>Password</h3>
+                    </label>
+                    <input type="password" name="password" id="password" required>
+
+                    <label for="picUpload">
+                        <h3>Profile Picture</h3>
+                    </label>
+                    <input type="file" name="image1" id="picUpload" required accept=".png,.jpeg,.jpg">
+
+                    <img src="" alt="pickedImage" id="pickedImage">
+                    <button type="submit">
+                        <h3>Create Account</h3>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+        <%- include('extra/footer') %>
+
+</body>
+
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('extra/meta-data') %>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/user.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <title>My Posts</title>
+</head>
+
+<body>
+
+    <%- include('extra/main-pane copy') %>
+
+    <% for(const key of user)  { %>
+
+        <div class="list">
+            <ul>
+                <li>
+                    <h4><a href="/user/<%= key.userId %>/myposts">My post</a></h4>
+                </li>
+                <li>
+                    <h4><a href="/user/<%= key.userId %>/create-post">Create Post</a></h4>
+                </li></a>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="userDetauilsPage">
+        <img id="userImge" src="<%= key.file %>" alt="ggdfg">
+        <div class="userDetauilsPage2">
+        <h1><%= key.userName %></h1>
+        <div class="userDetauilsPage3">
+            <p>36 posts</p>
+            <p>5 followers</p>
+            <p>56 following</p>
+            <a href="/user/<%= key.userId %>">All Posts</a>
+        </div>
+    </div>
+    </div>
+
+    <% } %>
+
+            <ul>
+   <% for(const key of allPosts)  { %>
+        
+        <li>
+        <div id="post-pane">
+
+            <img src="<%= key.file %>" alt="fcgcfg" id="mainImage">
+            <h2><%= key.title %></h2>
+            <p><i>by <%= key.author.authName %></i></p>
+            <h3><%= key.summary %></h3>
+
+           
+           
+    
+            <div id="buttons">
+            <span><a href="/delete/<%=key._id%>"><b>Delete Post</b></a></span><span><a href="/edite/<%=key._id%>"><b>Edite Post</b></a></span>
+            <button id="view-post"><h3><a href="/all-post/<%=key._id%>">View Post</a></h3></button>
+        </div>
+        </div>
+    </li>
+
+   <% } %>
+
+</ul>
+
+
+
+
+    
+
+    <%- include('extra/footer') %>
+
+    </body>
+
+    </html>
+    

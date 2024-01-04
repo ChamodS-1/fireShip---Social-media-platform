@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('extra/meta-data') %>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/user.css">
+    <link rel="stylesheet" href="/style/viwpost.css">
+    <link rel="stylesheet" href="/style/allpost.css">
+    <link rel="stylesheet" href="/style/post.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <script src="/scripts/comments.js" defer></script>
+    <script src="/scripts/numbers.js" defer></script>
+    <script src="/scripts/numbers2.js" defer></script>
+    <title>View-Posts</title>
+</head>
+
+<body>
+
+    <% for(const keys of user)  { %>
+
+        <div class="main-pane" id="main-pane">
+            <img src="/image/dating-app-logo-tinder-removebg-preview (1).png" alt="fgdfg" style="width: 4rem;">
+
+        <div class="list">
+            <ul>
+                <li>
+                    <h4><a href="/user/myposts/<%= keys.userId %>">My post</a></h4>
+                </li>
+                <li>
+                    <h4><a href="/user/create-post/<%= keys.userId %>">Create Post</a></h4>
+                </li></a>
+                <li>
+                    <h4><a href="/login">log Out</a></h4>
+                </li></a>
+            </ul>
+        </div>
+    </div>
+
+    <h1>view Posts.</h1>
+
+    <% for (key of result) { %>
+        <div id="post-pane3">
+
+            <img src="<%= key.file %>" alt="picture" id="mainImage">
+            <h2><%= key.title %></h2>
+
+            <div class="hashHolder">
+
+             <% if(hastags) { %>
+                <% for (hash of hastags) { %>
+                    <h4>#<%= hash %></h4>
+                    <% } %>
+             <% } %>
+           
+        </div>
+
+            <% if(key.userID === receivedValue)  { %>
+            <p><i>by You<span class="time"> &nbsp; <%= key.date %></span></i></p>
+            <% } else { %>
+                <p class="flexClass"><img src=" <%= key.author.authorPic %>" alt="" id="imagePic10"><i>by  <%= key.author.authName %> ( <%= key.author.authEmail %> )<span>  </span><span class="time"> <%= key.date %></span></i></p>
+                <% } %>
+
+            <% if (length===0 ) { %>
+            <p><span class= "keyDate" id="keyDate"><%=key.viewCount%></span> views | No Comments</p>
+            <% } else { %>
+                <p><span class= "keyDate" id="keyDate2"><%=key.viewCount%></span>views |  <span class="comment"><%=length%> Comments</span></p>
+            <% } %>
+            <hr>
+            <p><%=key.postcontent %></p>
+    
+        </div>
+
+        <div class="comment">
+            <button id="loadsComments" data-postnumber="<%=key._id%>">Loads Comments</button>
+          </div>
+
+          <ul class="postPane">
+        </ul>
+
+        <div id="inser-form">
+
+        <div id="form">
+
+            <form action="/user/all-post/<%=key._id%>?value=<%= keys.userId %>" method="POST">
+
+                <label for="form-summery">
+                    <h3>Comment</h3>
+                </label>
+                <input type="text" name="titlesummery" id="form-summery" required>
+        
+                <button type="submit">
+                    <h3>Submit Comment</h3>
+                </button>
+        
+            </form>
+        </div>
+
+        </div>
+         <% } %>
+
+         <% } %>
+    <%- include('extra/footer') %>
+
+</body>
+</html>

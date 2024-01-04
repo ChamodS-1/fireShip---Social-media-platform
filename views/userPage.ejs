@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('extra/meta-data') %>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/user.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <title>User Page</title>
+</head>
+
+<body>
+
+    <%- include('extra/main-pane copy') %>
+
+    <% if(isUpdated) { %>
+            <p class="updated">Post Updated Sucessfully!</p>
+        <% } %>
+
+        <% if(isDelete) { %>
+            <p class="deleted">Post Deleted Sucessfully!</p>
+        <% } %>
+
+    <% for(const keys of user)  { %>
+
+        <div class="list">
+            <ul>
+                <li>
+                    <h4><a href="/user/myposts/<%= keys.userId %>">My post</a></h4>
+                </li>
+                <li>
+                    <h4><a href="/user/create-post/<%= keys.userId %>">Create Post</a></h4>
+                </li></a>
+                <li>
+                    <h4><a href="/login">log Out</a></h4>
+                </li></a>
+            </ul>
+        </div>
+    </div>
+
+    <a href="/user/<%= keys.userId %>"><div class="userDetauilsPage">
+        <img id="userImge" src="<%= keys.file %>" alt="picture">
+        <div class="userDetauilsPage2">
+        <h1><%= keys.userName %></h1>
+        <div class="userDetauilsPage3">
+
+            <% if(count2)  { %>
+            <p><%=count2 %> posts</p>
+            <% } else { %>
+                <p><%=count %> posts</p>
+                <% } %>
+
+            <p>@<%= devidedUserName %></p>
+            <p><%= keys.email %></p>
+        </div>
+    </div>
+    </div></a>
+
+    
+
+    <% if(count === 0)  { %>
+        <p class="noPost">No Posts</p>
+        <% } else { %>
+ 
+            <ul>
+   <% for(const key of allPosts)  { %>
+        <li>
+        <div id="post-pane">
+
+           
+            <img src="<%= key.file %>" alt="picture" id="mainImage">
+            <h2><%= key.title %></h2>
+            <% if(key.userID === idOne)  { %>
+                <p><i>by You  <span class="dataView"> &nbsp; <%=key.date%></span></i></p>
+            <% } else { %>
+            <p class="parallel"><img src="<%= key.author.authorPic %>" alt="" id="mainImage5"><i>by <%= key.author.authName %>  <span class="dataView"> &nbsp; <%=key.date%></span></i></p>
+            <% } %>
+
+            <% if(key.viewCount === 0)  { %>
+            <h4>No Views</h4>
+            <% } else { %>
+                <h4><span class="viewCount"><%= key.viewCount %></span>Views</h4>
+                <% } %>
+
+            <div id="buttons">
+  
+            <% if(key.userID === idOne)  { %>
+                <span><a href="/user/delete/<%= keys.userId %>/<%=key._id%>"><b>Delete Post</b></a></span><span><a href="/user/edite/<%= keys.userId %>/<%=key._id%>"><b>Edite Post</b></a></span>
+            <% } %>
+
+            <button id="view-post"><h3><a href="/user/all-post/<%=key._id%>?value=<%= keys.userId %>">View Post</a></h3></button>
+
+        </div>
+        
+            
+        </div>
+    </li>
+
+   <% } %>
+
+   <% } %>
+
+   <% } %>
+
+</ul>
+
+
+
+
+    
+
+    <%- include('extra/footer') %>
+
+    </body>
+
+    </html>
+    

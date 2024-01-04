@@ -1,0 +1,78 @@
+body {
+
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(14,16,18);
+}
+
+.main-pane {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(14,16,18);
+    padding: 0.5rem 5rem;
+    color: aliceblue;
+    margin-top: 1rem;
+
+}
+
+#main-pane {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(14,16,18);
+    padding: 0.5rem 5rem;
+    color: aliceblue;
+    margin-top: 1rem;
+
+}
+
+#mainLogo{
+
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+
+.main-pane a{
+
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.list ul {
+
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 0;
+}
+
+
+.list {
+
+    align-self: center;
+
+}
+
+.list h2{
+
+    margin: 0;
+}
+
+.list a{
+
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.list a:hover{
+
+    
+    color: rgb(0, 122, 252);
+}
+

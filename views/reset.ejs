@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('extra/meta-data') %>
+        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="/style/post.css">
+        <link rel="stylesheet" href="/style/allpost.css">
+        <link rel="stylesheet" href="/style/footer.css">
+        <script src="/scripts/file-priview.js" defer></script>
+        <title>Password Reset</title>
+</head>
+
+<body>
+
+    <div class="main-pane">
+    
+        <h1>Password Reset.</h1>
+
+
+        <div id="inser-form">
+
+            <div id="form-head">
+                <a href="/blog-home"><a href="/blog-home"><h3><img src="image/dating-app-logo-tinder-removebg-preview (1).png" alt="" style="width: 5rem;">fireShip</h3></a></a>
+                <h4>RESET YOUR PASSWORD</h4>
+                <img src="/image/6076f540d539fa8c97126f0b_straigtaway.svg" alt="image">
+
+                <% if(notUser) { %>
+                    <p class="errorMessage">User not Found</p>
+                <% }  %>
+                
+
+        <a href="/sign-up"><p class="already">Create Account<p></a>
+        <a href="/login"><p class="already">Login<p></a>
+
+            </div>
+
+            <div id="form">
+
+                <form action="/reset" method="POST">
+
+                    <label for="email">
+                        <h3>Enter Email Address</h3>
+                    </label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="password">
+                        <h3>New Password</h3>
+                    </label>
+                    <input type="password" name="password" id="password" required>
+
+                    <button type="submit">
+                        <h3>Reset</h3>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <%- include('extra/footer') %>
+
+</body>
+
+</html>
+

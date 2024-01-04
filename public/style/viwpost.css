@@ -1,0 +1,140 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+h1 {
+
+    text-align: center;
+    font-size: 4rem;
+    color: aliceblue;
+    margin-top: 0.5rem;
+}
+
+#post-pane3{
+
+    background-color: rgb(23,28,31);
+    color: aliceblue;
+    width: fit-content;
+    border-radius: 15px;
+    margin: 3rem auto;
+    overflow: hidden;
+}
+
+#post-pane3 h2,#post-pane3 p,#post-pane3 h3{
+    margin-left: 2rem;
+}
+
+#post-pane2{
+
+    background-color: rgb(23,28,31);
+    color: aliceblue;
+    width: 50%;
+    border-radius: 15px;
+    padding: 0.5rem 2rem;
+    margin: 1rem auto;
+}
+
+#post-pane3 h2{
+
+    font-size: 3rem;
+}
+
+#post-pane3 h4{
+
+    font-size: 1rem;
+}
+
+#post-pane2 h2{
+
+    font-size: 3rem;
+}
+
+.time{
+
+    color: rgb(137, 137, 137);
+    font-size: 1rem;
+}
+
+#post-pane3 h3{
+
+    margin-top: 3rem;
+}
+
+#post-pane2 h3{
+
+    margin-top: 2rem;
+}
+
+.comment{
+    
+    text-align: center;
+    width:fit-content;
+    margin: 2rem auto;
+}
+
+.comment button{
+    margin: 1rem auto;
+}
+
+#commentLength{
+    color: aliceblue;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.postPane p {
+    color: aliceblue;
+    text-align: center;
+}
+
+.postPane li {
+    list-style: none;
+}
+
+.keyDate{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+#mainImage3{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 255, 204);
+    padding: 3px;
+    margin-right: 1rem;
+}
+
+#imagePic10{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid rgb(195, 0, 255);
+    padding: 3px;
+    margin-right: 1rem;
+}
+
+.detailsNav{
+    display: flex;
+    align-items: center;
+}
+
+.flexClass{
+    display: flex;
+    align-items: center;
+}
+
+.hashHolder{
+    display: flex;
+    margin-top: -2rem;
+    margin-left: 4.0rem;
+}
+
+.hashHolder h4{
+   margin: 0;
+   margin-left: -2rem;
+   margin-right: 2.5rem;
+   
+}

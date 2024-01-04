@@ -1,0 +1,175 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+h1 {
+
+    text-align: center;
+    font-size: 3.6rem;
+    color: aliceblue;
+    margin-top: 0.5rem;
+}
+
+#lenghth {
+
+    text-align: center;
+    font-size: 2rem;
+    color: aliceblue;
+    margin-top: 0.5rem;
+}
+
+
+
+#post-pane{
+
+    background-color: rgb(23,28,31);
+    text-align: center;
+    color: aliceblue;
+    width: fit-content;
+    border-radius: 15px;
+    margin: 1.7rem auto;
+    overflow: hidden;
+}
+
+#post-pane h2{
+
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+#view-post{
+
+    margin-right: 3rem;
+    border-radius: 30px;
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.7rem 1rem;
+    color: aliceblue;
+    margin: 0;
+    font-family: inherit;
+}
+
+#view-post:hover{
+
+    color: rgb(0, 122, 252);
+    border: 1px solid rgb(0, 122, 252);
+    background-color: rgb(0, 122, 252,0.1);
+    cursor: pointer;
+    
+
+}
+
+#view-post h3{
+
+    margin: 0;
+}
+
+#post-pane a{
+
+
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#buttons{
+
+    padding: 0.5rem 0;
+}
+
+span{
+
+    margin-right: 1rem;
+}
+
+span a b:hover{
+
+    color: rgb(0, 122, 252);
+}
+
+.parallel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1rem;
+}
+
+#mainImage{
+    width: fit-content;
+    
+}
+
+#mainImage5{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid rgb(0, 234, 255);
+    margin-right: 0.5rem;
+    
+}
+
+.viewCount{
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.userDetauilsPage{
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    margin: -1rem auto;
+    color: aliceblue;
+    position: sticky;
+    top:0rem;
+    padding: 0.7rem 29rem;
+    background-color:rgb(14,16,18) ;
+}
+
+.userDetauilsPage3{
+    display: flex;
+    margin-top: -3rem;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#userImge{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px solid rgb(255, 0, 225);
+    overflow: auto;
+}
+
+.dataView{
+    color: rgb(103, 103, 103);
+}
+
+.updated{
+    background-color: rgb(53, 193, 112);
+    border-radius: 5px;
+    padding: 0.8rem 0.7rem 0.1rem 0.7rem;
+    margin-left: 10rem;
+}
+
+.deleted{
+    background-color: rgb(193, 53, 76);
+    border-radius: 5px;
+    padding: 0.8rem 0.7rem 0.1rem 0.7rem;
+    margin-left: 12rem;
+}
+
+.noPost{
+    text-align: center;
+    color: aliceblue;
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+}
+

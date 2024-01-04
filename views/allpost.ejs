@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('extra/meta-data') %>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/allpost.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <title>All-Posts</title>
+</head>
+
+<body>
+
+    <%- include('extra/main-pane') %>
+
+    <h1>all Posts.</h1>
+
+    <h3 id="lenghth">We have <%= length %> Post/s</h3>
+
+
+
+            <ul>
+   <% for(const key of allPosts)  { %>
+        
+        <li>
+        <div id="post-pane">
+
+            <img src="<%= key.file %>" alt="fcgcfg" id="mainImage">
+            <h2><%= key.title %></h2>
+            <p><i>by <%= key.author.authName %></i></p>
+            <h3><%= key.summary %></h3>
+
+           
+           
+    
+            <div id="buttons">
+                <% if(key.userID===id) { %> 
+            <span><a href="/delete/<%=key._id%>"><b>Delete Post</b></a></span><span><a href="/edite/<%=key._id%>"><b>Edite Post</b></a></span>
+            <% } %>
+            <button id="view-post"><h3><a href="/all-post/<%=key._id%>">View Post</a></h3></button>
+        </div>
+        </div>
+    </li>
+
+   <% } %>
+
+</ul>
+
+
+
+
+    
+
+    <%- include('extra/footer') %>
+
+    </body>
+
+    </html>
+    
